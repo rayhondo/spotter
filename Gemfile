@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'masonry-rails', '~> 0.2.0'
+
 
 
 group :development, :test do

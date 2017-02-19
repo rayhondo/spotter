@@ -1,0 +1,17 @@
+<div id="spots" class="transitions-enabled">
+  <% @spots.each do |spot| %>
+    <div class="box panel panel-default">
+      <div class = "panel-body">
+        <strong><%= spot.title %></strong><br>
+        <%= spot.description %>
+        <%= link_to 'Show', spot_path(spot) %>
+        <% if spot.user == current_user %>
+          <%= link_to 'Edit', edit_spot_path(spot) %>
+          <%= link_to 'Destroy', spot, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Spot', new_spot_path %>
