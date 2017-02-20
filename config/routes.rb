@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :teachers
   resources :spots
   devise_for :users
   root 'pages#home'
